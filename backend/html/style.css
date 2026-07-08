@@ -72,7 +72,7 @@ button:hover{
 
 .completada{
     text-decoration:line-through;
-    color:gray;
+    color:rgb(185, 33, 33);
 }
 
 @media(max-width:600px){
