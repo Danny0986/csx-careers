@@ -3,7 +3,7 @@ function TaskList({ tasks, handleToggleTask, handleDeleteTask }) {
     <div className="task-list">
       {tasks.map((task) => (
         <article
-          className={`task-card ${task.completed ? 'completed' : ''}`}
+          className={`task-card ${task.completed ? "completed" : ""}`}
           key={task.id}
         >
           <div className="task-content">
@@ -19,7 +19,7 @@ function TaskList({ tasks, handleToggleTask, handleDeleteTask }) {
 
             <div>
               <span className="task-status">
-                {task.completed ? 'Completada' : 'Pendiente'}
+                {task.completed ? "Completada" : "Pendiente"}
               </span>
 
               <p>{task.text}</p>
@@ -77,7 +77,7 @@ function TaskList({ tasks, handleToggleTask, handleDeleteTask }) {
         </article>
       ))}
     </div>
-  )
+  );
 }
 
-export default TaskList
+export default TaskList;
