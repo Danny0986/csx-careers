@@ -46,10 +46,7 @@ app.use('/api', (_request, response) => {
 
 if (process.env.NODE_ENV === 'production') {
   const currentDirectory = path.dirname(fileURLToPath(import.meta.url));
-  const clientDistPath = path.resolve(
-    currentDirectory,
-    '../../client/dist',
-  );
+  const clientDistPath = path.resolve(currentDirectory, '../../client/dist');
 
   app.use(express.static(clientDistPath));
 
@@ -61,3 +58,5 @@ if (process.env.NODE_ENV === 'production') {
 app.listen(port, () => {
   console.log(`Servidor escuchando en http://localhost:${port}`);
 });
+
+console.log(process.env.DATABASE_URL);
